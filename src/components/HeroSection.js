@@ -31,11 +31,11 @@ export default function HeroSection() {
                                 <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                                     <div className="flex items-center justify-between w-full md:w-auto">
                                         <a href="#">
-                                            <span className="sr-only">Workflow</span>
+                                            <span className="sr-only">Flower</span>
                                             <img
-                                                alt="Workflow"
+                                                alt="Flower Lofo"
                                                 className="h-8 w-auto sm:h-10"
-                                                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                                                src="https://i.pinimg.com/736x/1a/a1/99/1aa199c9d2b5580e5208c6ff44bd6522.jpg"
                                             />
                                         </a>
                                         <div className="-mr-2 flex items-center md:hidden">
@@ -52,7 +52,7 @@ export default function HeroSection() {
                                             {item.name}
                                         </a>
                                     ))}
-                                    <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
+                                    <a href="#" className="font-medium text-red-500 hover:text-indigo-500">
                                         Log in
                                     </a>
                                 </div>
@@ -125,7 +125,7 @@ export default function HeroSection() {
                                 <div className="rounded-md shadow">
                                     <a
                                         href="#"
-                                        className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+                                        className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-500 hover:bg-red-500 md:py-4 md:text-lg md:px-10"
                                     >
                                         Get started
                                     </a>
@@ -133,7 +133,7 @@ export default function HeroSection() {
                                 <div className="mt-3 sm:mt-0 sm:ml-3">
                                     <a
                                         href="#"
-                                        className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
+                                        className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-red-500 bg-red-100 hover:bg-red-200 md:py-4 md:text-lg md:px-10"
                                     >
                                         Live demo
                                     </a>
