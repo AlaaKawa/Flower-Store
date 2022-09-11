@@ -6,8 +6,8 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { Link } from 'react-router-dom'
 
 const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'Pages', href: '#' },
+    { name: 'Home', href: '/', current: true },
+    { name: 'About', href: '/about', current: false },
     // { name: 'Marketplace', href: '#' },
     // { name: 'Company', href: '#' },
 ]
