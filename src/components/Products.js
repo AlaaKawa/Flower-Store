@@ -1,19 +1,6 @@
-/*
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
-*/
+import { useState } from "react"
+
+
 const products = [
     {
         id: 1,
@@ -63,7 +50,7 @@ const products = [
     {
         id: 1,
         name: 'Flower',
-        href: '#',
+        href: "#",
         imageSrc: 'https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-13-img.jpg',
         imageAlt: "",
         price: '$35',
@@ -91,6 +78,7 @@ const products = [
 ]
 
 export default function Products() {
+    const [color, setColor] = useState("red");
     return (
         <div className="bg-white">
             <div className="max-w-2xl mx-auto py-10 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
@@ -117,6 +105,7 @@ export default function Products() {
                                     <p className="mt-1 text-sm text-gray-500">{product.color}</p>
                                 </div>
                                 <p className="text-sm font-medium text-gray-900">{product.price}</p>
+
                             </div>
                         </div>
                     ))}

@@ -3,8 +3,10 @@ import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
+import { Link } from 'react-router-dom'
+
 const navigation = [
-    { name: 'Home', href: '#' },
+    { name: 'Home', href: '/' },
     { name: 'Pages', href: '#' },
     // { name: 'Marketplace', href: '#' },
     // { name: 'Company', href: '#' },
@@ -32,11 +34,8 @@ export default function HeroSection() {
                                     <div className="flex items-center justify-between w-full md:w-auto">
                                         <a href="#">
                                             <span className="sr-only">Flower</span>
-                                            <img
-                                                alt="Flower Lofo"
-                                                className="h-8 w-auto sm:h-10"
-                                                src="https://i.pinimg.com/736x/1a/a1/99/1aa199c9d2b5580e5208c6ff44bd6522.jpg"
-                                            />
+                                            <h1 style={{ fontSize: '40px' }} ><span className='text-red-500'>FIOR</span>ELLO</h1>
+
                                         </a>
                                         <div className="-mr-2 flex items-center md:hidden">
                                             <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -48,9 +47,19 @@ export default function HeroSection() {
                                 </div>
                                 <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
                                     {navigation.map((item) => (
-                                        <a key={item.name} href={item.href} className="font-medium text-gray-500 hover:text-gray-900">
+                                        <Link
+                                            key={item.name}
+                                            to={item.href}
+                                            className={({ isActive }) =>
+                                                isActive
+                                                    ? 'bg-indigo-900 text-white px-3 py-2 rounded-md text-sm font-medium'
+                                                    : 'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
+                                            }
+                                            aria-current={item.current ? 'page' : undefined}
+                                        >
                                             {item.name}
-                                        </a>
+                                        </Link>
+
                                     ))}
                                     <a href="#" className="font-medium text-red-500 hover:text-indigo-500">
                                         Log in
@@ -122,22 +131,10 @@ export default function HeroSection() {
                                 our flowers will make it special cursus a site amet mauris.
                             </p>
                             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                                <div className="rounded-md shadow">
-                                    <a
-                                        href="#"
-                                        className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-500 hover:bg-red-500 md:py-4 md:text-lg md:px-10"
-                                    >
-                                        Get started
-                                    </a>
+                                <div>
+                                    <img src='	https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/h2-sign-img.png' />
                                 </div>
-                                <div className="mt-3 sm:mt-0 sm:ml-3">
-                                    <a
-                                        href="#"
-                                        className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-red-500 bg-red-100 hover:bg-red-200 md:py-4 md:text-lg md:px-10"
-                                    >
-                                        Live demo
-                                    </a>
-                                </div>
+
                             </div>
                         </div>
                     </main>

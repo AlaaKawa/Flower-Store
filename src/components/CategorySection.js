@@ -8,10 +8,10 @@ export default function CategorySection() {
             <div class="  md:flex   pt-20 pl-20  ">
                 <div className=' lg:flex space-x-8 hidden sm:hidden md:flex space-x-8 '>
                     <div>
-                        <a href='#' className='hover:text-red-500'>All</a>
+                        <a href='#' className='hover:text-red-500' >All</a>
                     </div>
                     <div>
-                        <a href='products.name==cactus' className='hover:text-red-500'>Cactus</a>
+                        <a href='' className='hover:text-red-500'>Cactus</a>
                     </div>
                     <div>
                         <a href='#' className='hover:text-red-500'>Exotic</a>
